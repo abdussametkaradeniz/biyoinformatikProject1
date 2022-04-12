@@ -8,3 +8,13 @@ C:\Users\ttvar\source\repos\biyoinformatikProjesi\biyoinformatikProjesi\obj\Debu
 C:\Users\ttvar\source\repos\biyoinformatikProjesi\biyoinformatikProjesi\obj\Debug\biyoinformatikProjesi.csproj.CoreCompileInputs.cache
 C:\Users\ttvar\source\repos\biyoinformatikProjesi\biyoinformatikProjesi\obj\Debug\biyoinformatikProjesi.exe
 C:\Users\ttvar\source\repos\biyoinformatikProjesi\biyoinformatikProjesi\obj\Debug\biyoinformatikProjesi.pdb
+C:\Users\ttvar\Source\Repos\abdussametkaradeniz\biyoinformatikProject1\biyoinformatikProjesi\bin\Debug\biyoinformatikProjesi.exe.config
+C:\Users\ttvar\Source\Repos\abdussametkaradeniz\biyoinformatikProject1\biyoinformatikProjesi\bin\Debug\biyoinformatikProjesi.exe
+C:\Users\ttvar\Source\Repos\abdussametkaradeniz\biyoinformatikProject1\biyoinformatikProjesi\bin\Debug\biyoinformatikProjesi.pdb
+C:\Users\ttvar\Source\Repos\abdussametkaradeniz\biyoinformatikProject1\biyoinformatikProjesi\obj\Debug\biyoinformatikProjesi.csproj.AssemblyReference.cache
+C:\Users\ttvar\Source\Repos\abdussametkaradeniz\biyoinformatikProject1\biyoinformatikProjesi\obj\Debug\biyoinformatikProjesi.Form1.resources
+C:\Users\ttvar\Source\Repos\abdussametkaradeniz\biyoinformatikProject1\biyoinformatikProjesi\obj\Debug\biyoinformatikProjesi.Properties.Resources.resources
+C:\Users\ttvar\Source\Repos\abdussametkaradeniz\biyoinformatikProject1\biyoinformatikProjesi\obj\Debug\biyoinformatikProjesi.csproj.GenerateResource.cache
+C:\Users\ttvar\Source\Repos\abdussametkaradeniz\biyoinformatikProject1\biyoinformatikProjesi\obj\Debug\biyoinformatikProjesi.csproj.CoreCompileInputs.cache
+C:\Users\ttvar\Source\Repos\abdussametkaradeniz\biyoinformatikProject1\biyoinformatikProjesi\obj\Debug\biyoinformatikProjesi.exe
+C:\Users\ttvar\Source\Repos\abdussametkaradeniz\biyoinformatikProject1\biyoinformatikProjesi\obj\Debug\biyoinformatikProjesi.pdb

@@ -177,7 +177,7 @@ namespace biyoinformatikProjesi
             fillGridViewColomn();
             fillGridViewRow();
             fillGap();          
-            fillCells();          
+            fillCells();             
             traceback();
             
             calculate.Stop();
@@ -261,9 +261,9 @@ namespace biyoinformatikProjesi
         //hücreleri dolduran metot
         public void fillCells()
         {
-            for (int rowI = 1; rowI < txt1Count+1; rowI++)
+            for (int rowI = 1; rowI < txt2Count+1; rowI++)
             {
-                for (int cellI = 1; cellI < txt2Count+1; cellI++)
+                for (int cellI = 1; cellI < txt1Count+1; cellI++)
                 {
                     dataGridView1.Rows[rowI].Cells[cellI].Value= lastState(rowI, cellI);
                 }
@@ -290,35 +290,19 @@ namespace biyoinformatikProjesi
          * matris üzerinde gezinmek için bir adet index veya cursor gibi hareket eden araca ihtiyacımız var
          *
          */
+        
+        
+        /******************** Performans ve sonuç değerlerinin yazıldığı kısım ************/
 
         public void traceback()
         {
             score = 0;
             int rowIndex = txt2Count;
             int cellIndex = txt1Count;
-            while (rowIndex != -1 && cellIndex != -1)
+            while (rowIndex != 0 && cellIndex != 0)
             {
-
-                if (rowIndex == 0 )
-                {
-                    dataGridView1.Rows[rowIndex].Cells[cellIndex].Style.BackColor = Color.Red;
-                    combination1 = combination1 + dataGridView1.Rows[rowIndex].HeaderCell.Value.ToString();
-                    combination2 = combination2 + dataGridView1.Columns[cellIndex].HeaderText.ToString();
-                    combination1 = combination1 + "--";
-                    score = score + gap;
-                    break;
-                }
-                if (cellIndex == 0)
-                {
-                    dataGridView1.Rows[rowIndex].Cells[cellIndex].Style.BackColor = Color.Red;
-                    combination1 = combination1 + dataGridView1.Rows[rowIndex].HeaderCell.Value.ToString();
-                    combination2 = combination2 + dataGridView1.Columns[cellIndex].HeaderCell.Value.ToString();
-                    combination2 = combination2 + "--";
-                    score = score + gap;
-                    break;
-                }
                 valuesLastState = returnValuesLastStateArray(rowIndex, cellIndex);
-                int maxValueFromValuesLastState = returnMaxValue(valuesLastState);                
+                int maxValueFromValuesLastState = returnMaxValue(valuesLastState);    
                 if ((dataGridView1.Columns[cellIndex].HeaderText.ToString().Equals(dataGridView1.Rows[rowIndex].HeaderCell.Value.ToString())))
                 {
                     combination1 = combination1 + dataGridView1.Rows[rowIndex].HeaderCell.Value.ToString();
@@ -330,8 +314,8 @@ namespace biyoinformatikProjesi
                 }
                 else
                 {
-                    if (returnDiagonalValue(rowIndex, cellIndex) == maxValueFromValuesLastState)
-                    {
+                     if (returnDiagonalValue(rowIndex, cellIndex) == maxValueFromValuesLastState)
+                     {
                         //çapraza git                    
                         combination1 = combination1 + dataGridView1.Rows[rowIndex].HeaderCell.Value.ToString();
                         combination2 = combination2 + dataGridView1.Columns[cellIndex].HeaderCell.Value.ToString();
@@ -340,43 +324,32 @@ namespace biyoinformatikProjesi
                         cellIndex--;
                         score = score + missmatch;
                         
-                    }
-                    else if (fromLeft(rowIndex, cellIndex) == maxValueFromValuesLastState)
-                    {
+                     }
+                      else if (fromLeft(rowIndex, cellIndex) == maxValueFromValuesLastState)
+                      {
                         //sola git
-                        if (cellIndex == 0)
-                        {
-                            combination1 = combination1 + dataGridView1.Rows[rowIndex].HeaderCell.Value.ToString();
+                         combination1 = combination1 + "--";
                             combination2 = combination2 + dataGridView1.Columns[cellIndex].HeaderText.ToString();
                             dataGridView1.Rows[rowIndex].Cells[cellIndex].Style.BackColor = Color.Red;
-                            score = score + missmatch;
-                        }
+                           score = score + gap;
+                         cellIndex = cellIndex - 1;
+
+
+                      }
                         else
                         {
-                            combination1 = combination1 + "--";
-                            combination2 = combination2 + dataGridView1.Columns[cellIndex].HeaderCell.Value.ToString();
-                            dataGridView1.Rows[rowIndex].Cells[cellIndex].Style.BackColor = Color.Red;
-                            cellIndex = cellIndex - 1;
-                            score = score + gap;
-                        }
-                       
-                    }
-                    else
-                    {
                         //yukarı git
                         combination1 = combination1 + "--";
                         combination2 = combination2 + dataGridView1.Columns[cellIndex].HeaderText.ToString();
                         dataGridView1.Rows[rowIndex].Cells[cellIndex].Style.BackColor = Color.Red;
                         rowIndex = rowIndex - 1;
                         score = score + gap;
-                    }
-                }              
-               
+                        }
+                }
             }
-          
         }
 
-        /******************** Performans ve sonuç değerlerinin yazıldığı kısım ************/
+
 
         public string Reverse(string text)
         {
@@ -401,3 +374,4 @@ namespace biyoinformatikProjesi
 
     }
 }
+
